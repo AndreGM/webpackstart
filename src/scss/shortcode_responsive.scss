@@ -1,0 +1,76 @@
+@media only screen and (max-width: 768px) {
+    .comp-shortcode__title {
+        padding: 0 15px 0 15px;
+        text-align: center;
+    }
+    .comp-shortcode__header {
+        display: none;
+    }
+    .comp-shortcode__body {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .comp-shortcode__body__item {
+        flex-flow: row wrap;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .comp-shortcode__body__item__iata-city {
+        flex: auto;
+        box-sizing: border-box;
+        padding: 0;
+        width: 40vw;
+        text-align: center;
+    }
+    .comp-shortcode__body__item__iata-city--departure {
+        flex: auto;
+        box-sizing: border-box;
+        padding: 0 0 0 15px;
+        order: 1;
+    }
+    .comp-shortcode__body__item__iata-city--arrive {
+        flex: auto;
+        box-sizing: border-box;
+        padding: 0 15px 0 0;
+        order: 3;
+    }
+    .comp-shortcode__body__item__arrow {
+        flex: auto;
+        order: 2;
+        text-align: center;
+    }
+    .comp-shortcode__body__item__cia-logo {
+        flex: auto;
+        box-sizing: border-box;
+        padding: 0;
+        order: 5;
+        width: 40vw;
+    }
+    .comp-shortcode__body__item__departure-arrive {
+        flex: auto;
+        padding: 0;
+        order: 4;
+        width: 100vw;
+        margin: 10px 15px 15px 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px dashed #c5c5c5;
+    }
+    .comp-shortcode__body__item__departure-arrive__bullet {
+        color: #ffffff;
+        width: 16vw;
+    }
+    .comp-shortcode__body__item__departure-arrive__departure {
+        width: 100%;
+        text-align: center;
+    }
+    .comp-shortcode__body__item__departure-arrive__arrive {
+        width: 100%;
+        text-align: center;
+    }
+    .comp-shortcode__body__item__price {
+        flex: auto;
+        padding: 0;
+        order: 6;
+        width: 40vw;
+    }
+}
