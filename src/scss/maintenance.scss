@@ -1,0 +1,82 @@
+// Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700');
+body{
+    margin: 0;
+    background-color: #004986;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    color: #ffffff;
+    justify-content: center;
+    align-items:center;
+}
+
+.block{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-flow: column nowrap;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    width: 550px;
+    box-sizing: border-box;
+    padding: 40px 18px 40px 18px;   
+    
+    .title{
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 46px;
+        font-weight: 700;
+        color: #004986;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .text{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        color: #545459;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    strong{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        color: #545459;
+        text-align: center;
+    }
+
+}
+
+.phone{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    small{
+        font-size: 16px;
+    }
+}
+
+.email{
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+}
+
+@media only screen and (max-width: 550px) {
+    .container{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+    .block {
+        width: 100%;
+         .title {
+             font-size: 38px;
+         }
+    }
+}

@@ -8,7 +8,8 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 module.exports = {
     entry: {
         app: './src/index.js',
-        about: './src/about.js'
+        about: './src/about.js',
+        maintenance: './src/maintenance.js'
     },
     output: {
         filename: '[name].bundle.js',
@@ -57,6 +58,11 @@ module.exports = {
             filename: 'about.html',
             template: 'src/views/about.html',
             chunks: ['about']
+        }),
+        new HtmlWebpackPlugin({
+             filename: 'maintenance.html',
+             template: 'src/views/maintenance.html',
+             chunks: ['maintenance']
         }),
         new BrowserSyncPlugin(
             // BrowserSync options
