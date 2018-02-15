@@ -1,0 +1,1 @@
+import { plconf } from './js/module_plconf';

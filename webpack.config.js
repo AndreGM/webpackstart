@@ -64,6 +64,11 @@ module.exports = {
              template: 'src/views/maintenance.html',
              chunks: ['maintenance']
         }),
+        new HtmlWebpackPlugin({
+            filename: 'plconf.html',
+            template: 'src/views/plconf.html',
+            chunks: ['plconf']
+        }),
         new BrowserSyncPlugin(
             // BrowserSync options
             {
