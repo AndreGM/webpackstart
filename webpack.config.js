@@ -2,6 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 
@@ -9,10 +10,12 @@ module.exports = {
     entry: {
         app: './src/index.js',
         about: './src/about.js',
-        maintenance: './src/maintenance.js'
+        maintenance: './src/maintenance.js',
+        plconf: './src/plconf.js'
+
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: 'js/[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     devtool: 'inline-source-map',
@@ -41,14 +44,22 @@ module.exports = {
             },
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
+                exclude: [path.resolve(__dirname, "node_modules/"), path.resolve(__dirname, "src/vendor/")],
                 loader: 'babel-loader'
             }
         ]
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
-        new ExtractTextPlugin('[name].styles.css'),
+        new ExtractTextPlugin('css/[name].styles.css'),
+        new CopyWebpackPlugin([{  // copy assets to public folder
+            from: __dirname + '/src/img',
+            to: __dirname + '/dist/img'
+        }], { debug: 'debug' }),
+        new CopyWebpackPlugin([{  // copy assets to public folder
+            from: __dirname + '/src/vendor',
+            to: __dirname + '/dist/vendor'
+        }], { debug: 'debug' }),
         new HtmlWebpackPlugin({
                 filename: 'index.html',
                 template: 'src/views/index.html',

@@ -1,6 +1,9 @@
+import "../scss/typography.scss";
 import "../scss/plconf.scss";
-console.log('plugin module loaded');
-function shortcode() {
-    console.log('plugin module function called');
+
+function plgconf() {
+    console.log('########################### plugin module function called ###############################');
+   
 }
-export { pluginconf };
+export { plgconf };
+

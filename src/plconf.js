@@ -1,1 +1,3 @@
-import { plconf } from './js/module_plconf';
+
+import {plgconf}  from './js/module_plconf';
+plgconf();
