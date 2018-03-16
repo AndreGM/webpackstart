@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_arrow_forward_24px</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="BROKER" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-767.000000, -1648.000000)" id="Group-10">
+            <g transform="translate(72.000000, 1491.000000)">
+                <g id="Group-16" transform="translate(0.000000, 115.000000)">
+                    <g id="Group-15">
+                        <g id="Group-13" transform="translate(504.000000, 30.000000)">
+                            <g id="ic_arrow_forward_24px" transform="translate(187.000000, 8.000000)">
+                                <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                                <polygon id="Shape" fill="#008BFF" fill-rule="nonzero" points="12 4 10.59 5.41 16.17 11 4 11 4 13 16.17 13 10.59 18.59 12 20 20 12"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

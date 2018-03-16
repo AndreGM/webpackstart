@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Plugin Configuration</title>
     
+   
+    <!-- Include Choices CSS -->
+    <link rel="stylesheet" href="vendor/choices/assets/styles/css/choices.css">
+    <!-- Include Choices JavaScript -->
+    <script src="vendor/choices/assets/scripts/dist/choices.min.js"></script>
+  
+    
 </head>
-<body>
+<body id="ppromo_custom_conf_overlay">
     <div class="comp-plgconf">
         <div class="comp-plgconf__title">
             <strong>Afiliados Passagens Promo</strong>
@@ -16,26 +23,205 @@
             <div class="comp-plgconf__body__title">
                 <strong>Título</strong>
                 <picture>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-                        <g fill="none" fill-rule="evenodd">
-                            <path d="M0 0h24v24H0z" />
-                            <path fill="#008BFF" fill-rule="nonzero" d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
-                            />
-                        </g>
-                    </svg>
+                    <div class="tooltip">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                            <g fill="none" fill-rule="evenodd">
+                                <path d="M0 0h24v24H0z" />
+                                <path fill="#008BFF" fill-rule="nonzero" d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                                />
+                            </g>
+                            <span class="tooltiptext">Esse é o titulo que aparece acima do seu comparador de preços.</span>
+                        </svg>
+                    </div>
                 </picture>
-                <span>
-                    <!-- <select id="example" type="text" class="input-class input-class--full"> -->
-                        <select class="form-control" name="choices-single-selected-option-1" id="choices-single-selected-option-1" placeholder="This is a placeholder">
-                        </select>
-                        
-                        <select class="form-control" name="choices-single-selected-option-2" id="choices-single-selected-option-2" placeholder="This is a placeholder"
-                            multiple>
-                        </select>
-                        <option> Digite uma cidade</option>
-                    </select>
+                <span class="is-invalid">
+                    <input type="text" class="input-class input-class--full" placeholder="Ex.: Menores preços de passagens aéreas saindo de…">
+                    <span class="is-invalid-msg">Preencha o campo corretamente</span>
                 </span>
             </div>
+            <div class="comp-plgconf__body__cities">
+                <!-- origin -->
+                <div class="comp-plgconf__body__cities__city">
+                    <div class="line-label">
+                        <strong class="title">Origem<span> (opcional)</span></strong>
+                        <picture>
+                            <div class="tooltip">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path d="M0 0h24v24H0z" />
+                                        <path fill="#008BFF" fill-rule="nonzero" d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                                        />
+                                    </g>
+                                    <span class="tooltiptext">Esse é o titulo que aparece acima do seu comparador de preços.</span>
+                                </svg>
+                            </div>
+                        </picture>
+                    </div>
+                    <div class="line-options">
+                        <span><input type="radio" name="cityregionorigin"><label>Cidade</label></span>
+                        <span><input type="radio" name="cityregionorigin"><label>Região ou País</label></span>
+                    </div>
+                    <div class="line-input is-invalid">
+                        <!-- id="choices-city-origin" -->
+                        <select id="choices-city-origin"  class="input-class input-class" aria-placeholder="Digite a Cidade">
+                            <option placeholder>Digite a cidade</option>
+                        </select> 
+                        <span class="is-invalid-msg">Preencha o campo corretamente</span>
+                    </div>
+                </div>
+                <!-- spacer -->
+                <div class="comp-plgconf__body__cities__arrow">
+                    <picture>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" viewBox="0 0 16 15">
+                            <g fill="#A8A8A8" fill-rule="evenodd">
+                                <path d="M1 5h10v3l5-4-5-4v3H1zM15 10H5V7l-5 4 5 4v-3h10z" />
+                            </g>
+                        </svg>
+                    </picture>
+                </div>
+                <!-- destiny -->
+                <div class="comp-plgconf__body__cities__city">
+                    <div class="line-label">
+                        <strong class="title">Destino<span></span></strong>
+                        <picture>
+                            <div class="tooltip">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path d="M0 0h24v24H0z" />
+                                        <path fill="#008BFF" fill-rule="nonzero" d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                                        />
+                                    </g>
+                                    <span class="tooltiptext">Esse é o titulo que aparece acima do seu comparador de preços.</span>
+                                </svg>
+                            </div>
+                        </picture>
+                    </div>
+                    <div class="line-options">
+                        <span><input type="radio" name="cityregiondestiny">Cidade</span>
+                        <span><input type="radio" name="cityregiondestiny">Região ou País</span>
+                    </div>
+                    <div class="line-input is-invalid">
+                        <!-- id="choices-city-destiny" -->
+                        <select id="choices-city-destiny" class=" input-class input-class "  aria-placeholder="Digite a Cidade ">
+                            <option placeholder>Digite a cidade</option>
+                        </select>
+                        <span class="is-invalid-msg">Preencha o campo corretamente</span>
+                    </div>
+                </div>
+            </div>
+            <div class="comp-plgconf__body__change-option">
+                <div class="line-label">
+                    <strong>Deixar que o visitante altere a origem selecionada? </strong>
+                    <picture>
+                        <div class="tooltip">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="M0 0h24v24H0z" />
+                                    <path fill="#008BFF" fill-rule="nonzero" d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                                    />
+                                </g>
+                                <span class="tooltiptext">Esse é o titulo que aparece acima do seu comparador de preços.</span>
+                            </svg>
+                        </div>
+                    </picture>
+                </div>
+                <div class="line-options">
+                    <span>
+                        <input type="radio" name="sn" value="s">
+                        <label>Sim</label>
+                    </span>
+                    <span>
+                        <input type="radio" name="sn" value="n">
+                        <label>Não</label>
+                    </span>
+                </div>
+            </div>
+            <div class="comp-plgconf__body__datas">
+                <div class="line-label">
+                    <strong>Data</strong>
+                    <picture>
+                        <div class="tooltip">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="M0 0h24v24H0z" />
+                                    <path fill="#008BFF" fill-rule="nonzero" d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                                    />
+                                </g>
+                                <span class="tooltiptext">Esse é o titulo que aparece acima do seu comparador de preços.</span>
+                            </svg>
+                        </div>
+                    </picture>
+                </div>
+                <span class="date-select">
+                    <select  id="date-select" class="input-class input-class" placeholder="Escolha um mês"> 
+                        <option placeholder> Escolha um mês</option>
+                    </select>
+                </span>
+                <span class="presset-select">
+                    <div class="title">Ou selecione um período de data pré definido</div>
+                    <div class="presset-buttons">
+                        <a href="">Carnaval 2018</a>
+                        <a href="">Páscoa</a>
+                        <a href="">Natal</a>
+                    </div>
+                </span>
+            </div>
+
+            <div class="comp-plgconf__body__configuration">
+                <!-- tags -->
+                <div class="comp-plgconf__body__tag-qtd">
+                    <div class="line-label">
+                        <strong class="title">Tags</strong>
+                        <picture>
+                            <div class="tooltip" >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path d="M0 0h24v24H0z" />
+                                        <path fill="#008BFF" fill-rule="nonzero" d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                                        />
+                                    </g>
+                                    <span class="tooltiptext">Esse é o titulo que aparece acima do seu comparador de preços.</span>
+                                </svg>
+                            </div>
+                        </picture>
+                    </div>
+                    <!-- class is-invalid -->
+                    <div class="line-input is-invalid">
+                        <input type="text" class="input-class input-class" placeholder="Ex.: post europa">
+                        <span class="is-invalid-msg">Preencha o campo corretamente</span>
+                    </div>
+                </div>  
+                
+                <!-- quantity -->
+                <div class="comp-plgconf__body__tag-qtd">
+                    <div class="line-label">
+                        <strong class="title">Quantidade de resultados
+                        </strong>
+                        <picture>
+                            <div class="tooltip">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                                    <g fill="none" fill-rule="evenodd">
+                                        <path d="M0 0h24v24H0z" />
+                                        <path fill="#008BFF" fill-rule="nonzero" d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"
+                                        />
+                                    </g>
+                                    <span class="tooltiptext">Esse é o titulo que aparece acima do seu comparador de preços.</span>
+                                </svg>
+                            </div>
+                        </picture>
+                    </div>
+                    <div class="line-input">
+                        <select id="qtd-select" class="input-class input-class" aria-placeholder="Selecione uma opção">
+                            
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="comp-plgconf__footer">
+            <a href="" class="cancel">Cancelar</a>
+            <a href="" class="insert">Inserir</a>
         </div>
     </div>
 </body>

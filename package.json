@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "buildmap": "webpack --profile --json > stats.json"
   },
   "author": "",
   "license": "ISC",
@@ -31,6 +32,7 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
     "webpack": "^3.10.0",
+    "webpack-bundle-analyzer": "^2.11.0",
     "webpack-dev-server": "^2.11.1"
   },
   "browserslist": [

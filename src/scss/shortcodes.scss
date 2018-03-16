@@ -1,0 +1,156 @@
+.comp-shortcode{
+    display: flex;
+    flex-flow: column nowrap;
+    font-family: 'Open Sans',sans-serif;
+    max-width: 740px;
+    overflow: hidden;
+}
+
+.comp-shortcode__title {
+    background-color: #004986; //change
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 16px;
+    color: #ffffff; //change
+    font-weight: 400;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.comp-shortcode__header {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #186aaf; //change
+    height: 45px;
+    align-items: center;
+    position: relative;
+    
+}
+.comp-shortcode__header__item {
+    color: #ffffff; //change
+    font-size: 14px;
+    font-weight: 700;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0 15px 0 15px;
+    display: flex;
+
+}
+
+.comp-shortcode__header__item--center{
+    justify-content: center;
+}
+
+.comp-shortcode__body {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.comp-shortcode__body__item {
+    display: flex;
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 60px;
+    flex-flow: row nowrap;
+    text-decoration: none;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-right: solid 1px #c5c5c5;
+    border-bottom: solid 1px #c5c5c5;
+    border-left: solid 1px #c5c5c5;
+}
+
+.comp-shortcode__body__item:hover {
+    background-color: #eceff1; //change
+    text-decoration: none;
+}
+
+.comp-shortcode__body__item__iata-city{
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0 15px 0 15px;
+}
+
+.comp-shortcode__body__item__iata-city--departure {
+    flex: 0.86;
+    box-sizing: border-box;
+    padding: 0 15px 0 15px;
+}
+
+.comp-shortcode__body__item__arrow{
+    flex:0.14;
+}
+
+.comp-shortcode__body__item__iata-city__iata{
+    color: #545459; //change
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.comp-shortcode__body__item__iata-city__city{
+    font-size: 12px;
+    color: #a8a8a8; //change
+}
+
+.comp-shortcode__body__item__cia-logo{
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0 15px 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comp-shortcode__body__item__cia-logo__imagem {
+   width: 90px!important;
+   height: auto;
+}
+.comp-shortcode__body__item__departure-arrive{
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0 15px 0 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    color: #545459; //change
+}
+
+.comp-shortcode__body__item__price{
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0 15px 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comp-shortcode__body__item__price__btn{
+    width: 115px;
+    padding-top: 12px;
+    padding-bottom: 8px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #32cc34; //change
+    border: none;
+    color: #ffffff; //change
+    font-weight: 700;
+    cursor: pointer;
+}
+.comp-shortcode__footer {
+    display: flex;
+    flex-flow: row nowrap;
+    font-size: 12px;
+    color: #a8a8a8; //change
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #eceff1;
+    padding: 13px 15px 13px 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+

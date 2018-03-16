@@ -4,14 +4,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
-
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
     entry: {
         app: './src/index.js',
         about: './src/about.js',
         maintenance: './src/maintenance.js',
-        plconf: './src/plconf.js'
+        plconf: './src/plconf.js',
+        shortcodes: './src/shortcodes.js',
+        newshortcodes: './src/newshortcodes.js'
 
     },
     output: {
@@ -36,8 +38,8 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [
-                        { loader: 'css-loader', options: { sourceMap: true } },
-                        { loader: 'postcss-loader', options: { sourceMap: true } },
+                        { loader: 'css-loader', options: { sourceMap: true, safe: true } },
+                        // { loader: 'postcss-loader', options: { sourceMap: true , safe:true } },
                         { loader: 'sass-loader', options: { sourceMap: true } }
                     ]
                 })
@@ -78,8 +80,19 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'plconf.html',
             template: 'src/views/plconf.html',
-            chunks: ['plconf']
+            chunks: ['plconf','about']
         }),
+        new HtmlWebpackPlugin({
+            filename: 'shortcodes.html',
+            template: 'src/views/shortcodes.html',
+            chunks: ['shortcodes']
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'newshortcodes.html',
+            template: 'src/views/newshortcodes.html',
+            chunks: ['newshortcodes']
+        }),
+        new BundleAnalyzerPlugin(),
         new BrowserSyncPlugin(
             // BrowserSync options
             {
